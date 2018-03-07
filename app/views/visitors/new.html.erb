@@ -1,62 +1,59 @@
-
-
-
-
-
-    <!-- Social Links -->
-<!--     <nav class="social-nav">
-      
-    </nav> -->
-
-    <!-- Switch to full screen -->
-    <button class="full-screen" onclick="$(document).toggleFullScreen()"></button>
-
-    <!-- Site Logo -->
-    <div id="logo">sysrex</div>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about" class="active">About</a></li>
-        <li><a href="#contact" class="active">Contact</a></li>
-      </ul>
-    </nav>
-
-
-    <!-- Home Page -->
-    <section class="content show" id="home">
-      <h1>Welcome</h1>
-      <h5>Our new site is coming soon!</h5>
-      <p>We are now porting all our tools to the open source enviroment.</p>
-      <p><a href="#about">More info &#187;</a></p>
+<div class="bgimg">
+  <div class="middle">
+    <hr>
+    
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+  <div class="marquis">
+          <div class="col-lg-6">
+            <h1 class="mt-5">Something New's Coming!</h1>
+            <p>Are you interested in how companies get started? How they survived their earliest challenges? We're putting together a place to read all those stories.</p>
+            <p>Sign up below to know when the site is live:</p>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <!-- About Page -->
-    <section class="content hide" id="about">
-      <h1>About</h1>
-      <h5>Here's a little about what we're up to.</h5>
-      <p>Sed vitae velit lorem, et scelerisque diam.</p>
-      <p><a href="#">Follow our updates on Twitter</a></p>
-    </section>
-
     <!-- Contact Page -->
     <section>
-      <div class="column">
-        <h2>Stay in touch.</h2>
-      </div>
-      <div class="column">
-        <div class="form-centered">
+      <div class="form-group">
           <%= simple_form_for @visitor do |f| %>
             <%= f.error_notification %>
             <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
             <br/>
-            <%= f.button :submit, "Sign up for the mailing list", :class => "submit" %>
+            <%= f.button :submit, "Sign up for the mailing list", :class => "submit btn" %>
           <% end %>
-        </div>
       </div>
     </section>
 
-    </script>
-  </body>
-</html>
+
+<script type="text/javascript">
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
