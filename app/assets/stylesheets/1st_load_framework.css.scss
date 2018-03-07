@@ -3,10 +3,7 @@
 @import "bootstrap";
 
 // make all images responsive by default
-img {
-  @extend .img-fluid;
-  margin: 0 auto;
-}
+
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
