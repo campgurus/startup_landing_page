@@ -12,6 +12,7 @@
 //
 //= require jquery3
 //= require popper
+//= require ahoy
 //= require rails-ujs
 //= require turbolinks
 //= require bootstrap-sprockets
